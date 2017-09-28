@@ -1,0 +1,14 @@
+<div class="row">
+   <div class="col s12">
+     <ul class="tabs">
+       <li class="tab col s3"><a class="active" href="#pokemon">Pokemons</a></li>
+       <li class="tab col s3"><a class="active" href="#berries">Berries</a></li>
+     </ul>
+   </div>
+   <div id="pokemon" class="col s12">
+     <app-pokemons [pokelist]="pokemons"></app-pokemons>
+   </div>
+   <div id="berries" class="col s12">
+     <app-berries [berries]="berries"></app-berries>
+   </div>
+ </div>

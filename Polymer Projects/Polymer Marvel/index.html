@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+    <link rel="import" href="bower_components/paper-card/paper-card.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+</head>
+<body>
+   <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <demo-element>
+
+    </demo-element>
+    <dom-module id="demo-element">
+        <template>
+            <template is="dom-repeat" items="{{response.data.results}}">
+              <paper-card heading="{{item.name}}" image="{{item.thumbnail.path}}.{{item.thumbnail.extension}}">
+                <div class="card-content">
+                  {{item.description}}
+                </div>
+              </paper-card>
+            </template>
+              <iron-ajax
+               auto
+               url="http://gateway.marvel.com/v1/public/characters"
+               params='{"ts":"1", "apikey":"cd610d56ee03be3a21d2153d09049058", "hash": "7fbd146bd057401df720b3fe57c71bdb"}'
+               handle-as="json"
+               on-response="handleResponse"
+               last-response="{{response}}">
+            </iron-ajax>
+        </template>
+    </dom-module>
+
+    <script>
+    HTMLImports.whenReady(function(){
+        Polymer({
+            is:'demo-element',
+            properties:{
+                response:{
+                    type: Object
+                }
+            },
+            handleResponse:function(e, request){
+                console.log(e.request);
+            }
+        })
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lastFMApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lastFM</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+</head>
+<body>
+  <section class="container">
+    <div class="row">
+      <h2>Artistas</h2>
+      <top-artist></top-artist>
+    </div>
+  </section>
+  <section class="container">
+    <div class="row">
+      <h2>Canciones</h2>
+      <top-tracks></top-tracks>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+  <script src="app/app.module.js"></script>
+  <script src="app/factories/lastFM.factory.js"></script>
+  <script src="app/components/topArtist.component.js"></script>
+  <script src="app/components/topTracks.component.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="col s12 m6" *ngFor="let planet of planets">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="https://s-media-cache-ak0.pinimg.com/736x/a8/71/3d/a8713d405c3363bfcd560bc3e91f2960.jpg">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5>{{planet.name}}</h5>
+        <p>Poblacion: <span>{{planet.population}}</span></p>
+        <p>Terreno : <span>{{planet.terrain}}</span></p>
+        <p>Diametro : <span>{{planet.diameter}}</span></p>
+        <p>Superficie Acuatica : <span>{{planet.surface_water}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>

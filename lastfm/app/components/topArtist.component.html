@@ -1,0 +1,11 @@
+<div class="col s12 m4" ng-repeat="a in $ctrl.topArtist">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{a.image[2]['#text']}}">
+      <span class="card-title">{{a.name}}</span>
+    </div>
+    <div class="card-action">
+      <a href="{{a.url}}">Mas Información</a>
+    </div>
+  </div>
+</div>

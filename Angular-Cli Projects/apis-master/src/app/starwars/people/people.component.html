@@ -1,0 +1,17 @@
+<div class="col s12 m4" *ngFor="let people of peopleArray">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="http://jedibusiness.com/images/actionfigures/6inch-The-Black-Series-3/hires/Tie-Fighter-Pilot-3-Thumb.jpg">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5>{{people.name}}</h5>
+        <p>Altura: <span>{{people.height}}cm</span></p>
+        <p>Peso: <span>{{people.mass}}kg</span></p>
+        <p>Color de cabello: <span>{{people.hair_color}}</span></p>
+        <p>Color de piel: <span>{{people.skin_color}}</span></p>
+        <p>Color de ojos: <span>{{people.eye_color}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+body{margin: 0; padding: 0}
+nav{width: 100%; height: 2em; margin-bottom: 5em; color:#222}
+.list-inline{ list-style: none; float: right;}
+.list-inline li {display: inline-block;}
+.list-inline li a{text-decoration: none; color: #222; padding-left: 3px; padding-right: 3px; margin-right: 5px;}
+.list-inline li a:hover {text-decoration: underline;}
+section {max-width: 950px; margin: 0 auto;}
+section img {display: block; width: 50%; margin: 0 auto;}
+section input {width: 70%; height: 25px; margin: 0 auto; display: block; margin-top: 1em;}
+.section-buttons {max-width: 950px; margin: 0 auto; margin-top: 1em;}
+.section-buttons button { padding: 10px; margin-right: 60px;}
+footer {background-color: #f2f2f2; border-top: 1px solid #e4e4e4; position:absolute; bottom: 0px; width: 100%}
+footer ul {display: inline-block; list-style: none;}
+footer li {display: inline-block; padding: 3px;}
+footer a {text-decoration: none; color: #222}
+footer a:hover{text-decoration: underline; color: #222}
+.second-list{float: right;;}

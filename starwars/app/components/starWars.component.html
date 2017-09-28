@@ -1,0 +1,15 @@
+
+<h1>{{$ctrl.category}}</h1>
+<section class="container">
+  <article ng-repeat="char in $ctrl.characters" class="row" style="background-color:#777; border-bottom:solid">
+    <div class="col-md-3">
+      <img src="http://mbti-databank.com/OLDV1/images/noimage.jpg" alt="no imagen" class="img-responsive" style="height:200px;">
+    </div>
+    <div class="col-md-1-offset col-md-8">
+        <p class="h3"><span style="color:white; margin-right:2em">Nombre:</span> {{char.name}}</p>
+        <p class="h3"><span style="color:white; margin-right:2em">Año de Nacimiento:</span>{{char.birth_year}}</p>
+        <p class="h3"><span style="color:white; margin-right:2em">Color de Ojos:</span>{{char.eye_color}}</p>
+        <p class="h3"><span style="color:white; margin-right:2em">Altura:</span>{{char.height}}</p>
+    </div>
+  </article>
+</section>

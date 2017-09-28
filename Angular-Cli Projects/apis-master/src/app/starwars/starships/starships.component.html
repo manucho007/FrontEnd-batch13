@@ -1,0 +1,16 @@
+<div class="col s12 m6" *ngFor="let starship of starships">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="http://files.softicons.com/download/tv-movie-icons/star-wars-vehicles-icons-by-jonathan-rey/png/128x128/Tie%20Advanced.png">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5>{{starship.name}}</h5>
+        <p>Modelo: <span>{{starship.model}}</span></p>
+        <p>Pasajeros : <span>{{starship.passengers}}</span></p>
+        <p>Precio : <span>{{starship.cost_in_credits}} Units</span></p>
+        <p>Nave Clase : <span>{{starship.starship_class}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>

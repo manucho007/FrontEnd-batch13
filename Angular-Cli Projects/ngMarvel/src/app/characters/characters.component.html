@@ -1,0 +1,10 @@
+<div class="col s4 m4 l4" *ngFor="let hero of heroes">
+  <div class="card card-hero">
+    <div class="card-image">
+      <img class="img-card" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">
+      <div class="card-action">
+        <p><a href="#">{{hero.name}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>

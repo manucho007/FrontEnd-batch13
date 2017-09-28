@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+</head>
+<body>
+  <demo-element></demo-element>
+  <dom-module id="demo-element">
+    <template>
+      <template is="dom-repeat" items="response.results">
+        {{item.name}}
+      </template>
+
+      <iron-ajax
+        auto
+        url="http://swapi.co/api/people/"
+        handle-as="json"
+        on-response="handleResponse"
+        last-response"{{response}}">
+      </iron-ajax>
+      {{response.name}}
+    </template>
+  </dom-module>
+  <script>
+    HTMLImports.whenReady(function () {
+      Polymer({
+        is:'demo-element',
+        properties:{
+            response:{
+              type:Object
+            }
+        },
+        handleResponse:function (e,request) {
+          console.log(e);
+        }
+      })
+    })
+  </script>
+</body>
+</html>

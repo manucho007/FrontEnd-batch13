@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="starApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <base href="/">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body class="container-fluid" style="font-family:fantasy;">
+  <header>
+    <nav class="nav navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/people">people</a></li>
+        <li><a href="/planets">planets</a></li>
+      </ul>
+    </nav>
+  </header>
+<main ng-view></main>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/components/starWar.component.js"></script>
+<script src="app/components/hello.component.js"></script>
+<script src="app/factories/starWars.factory.js"></script>
+<script src="app/routes/routes.js"></script>
+</body>
+</html>

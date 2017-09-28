@@ -1,0 +1,15 @@
+<div class="col s12 m4" *ngFor="let event of events">
+  <div class="card medium">
+    <div class="card-image">
+      <img src="{{event.thumbnail.path}}.{{event.thumbnail.extension}}" alt="{{event.title}}">
+      <span class="card-title">{{event.title}}</span>
+    </div>
+    <div class="card-content">
+      <p *ngIf="event.description">{{event.description}}</p>
+      <p *ngIf="!event.description">Sin descripcion disponible</p>
+    </div>
+    <div class="card-action">
+      <a href="{{event.resourceURI}}">Detalle</a>
+    </div>
+  </div>
+</div>

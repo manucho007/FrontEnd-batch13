@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body class="container" ng-controller="myCtrl as movie">
+  <style type="text/css">
+    body{font-family: serif; color: white; background-color: black;}
+    .wrapper-row{margin-bottom: 2em; background-color: grey;}
+  </style>
+  <h1>Peliculas Favoritas</h1>
+  <section class="wrapper-row" ng-repeat="m in movie.movies">
+    <div class="row">
+      <div class="col-sm-3 col-xs-12">
+        <img src="{{m.img}}" class="img-responsive" alt="{{m.title}}">
+      </div>
+      <div class="col-sm-9 col-xs-12">
+        <h2>{{m.title}}</h2>
+        <p class="h4">Año : {{m.year}}</p>
+        <p class="h4">Director : {{m.director}}</p>
+        <p class="h4">Escritor : {{m.escritor}}</p>
+      </div>
+    </div>
+  </section>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="app/app.module.js"></script>
+</body>
+</html>

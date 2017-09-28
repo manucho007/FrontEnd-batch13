@@ -1,0 +1,2 @@
+.wrapper-imgs img{width: 40%; display: inline-block; height: 200px}
+.wrapper-imgs img:last-child{margin-left: 2em}

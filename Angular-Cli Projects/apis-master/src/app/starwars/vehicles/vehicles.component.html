@@ -1,0 +1,16 @@
+<div class="col s12 m6" *ngFor="let vehicle of vehicles">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="http://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/256/AT-AT-icon.png">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5>{{vehicle.name}}</h5>
+        <p>Modelo: <span>{{vehicle.model}}</span></p>
+        <p>Pasajeros : <span>{{vehicle.passengers}}</span></p>
+        <p>Precio : <span>{{vehicle.cost_in_credits}} Units</span></p>
+        <p>Vehiculo Clase : <span>{{vehicle.vehicle_class}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="col s12 m4" *ngFor="let comic of comics">
+  <div class="card medium">
+    <div class="card-image">
+      <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="{{comic.title}}">
+      <span class="card-title">{{comic.title}}</span>
+    </div>
+    <div class="card-content">
+      <p *ngIf="comic.description">{{comic.description}}</p>
+      <p *ngIf="!comic.description">Sin descripcion disponible</p>
+    </div>
+    <div class="card-action">
+      <a href="{{comic.resourceURI}}">Detalle</a>
+    </div>
+  </div>
+</div>

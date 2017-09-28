@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav>
+    <ul class="list-inline nav-list">
+      <li><a href="#" data-toggle="modal" data-target="#Camion">Nuevo Camion</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#Conductor">Añadir conductor</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#Entrega">Añadir punto de entrega</a></li>
+    </ul>
+  </nav>
+  <div class="container-fluid wrapper-dashboard">
+    <div class="row">
+      <div class="col-md-2 wrapper-side">
+        <div class="btn-group-vertical" style="width:100%"; role="group" aria-label="...">
+          <button type="button" class="btn btn-default">Camion 1</button>
+          <br/>
+          <button type="button" class="btn btn-default" id="routebtn">Camion 2</button>
+          <br/>
+          <button type="button" class="btn btn-default">Camion 3</button>
+          <br/>
+          <button type="button" class="btn btn-default">Camion 4</button>
+          <br/>
+          <button type="button" class="btn btn-default">Camion 5</button>
+          <br/>
+          <button type="button" class="btn btn-default">Camion 6</button>
+          <br/>
+          <button type="button" class="btn btn-default">Camion 7</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 dashboard-main">
+        <h1>Camiones en Ruta</h1>
+        <div id="map" style="width:100%; height:400px;"></div>
+        <br/>
+        <hr/>
+        <div class="progress-wrappers">
+          <label for="camion 1"><a href="#" data-toggle="modal" data-target="#EntregasCamion">Camion 1</a> <a href="#" data-toggle="modal" data-target="#DatosChofer">Juan Lopez</a></label>
+          <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+              <span class="sr-only">20% Complete</span>
+            </div>
+          </div>
+          <label for="camion 1">Camion 2</label>
+          <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+              <span class="sr-only">20% Complete</span>
+            </div>
+          </div>
+          <label for="camion 1">Camion 3</label>
+          <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+              <span class="sr-only">40% Complete</span>
+            </div>
+          </div>
+          <label for="camion 1">Camion 4</label>
+          <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-2 dashboard-main">
+      <h2>Alertas</h2>
+      <p>no tienes ninguna alerta</p>
+    </div>
+  </div>
+  <div class="modal fade" id="Camion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Nuevo Camion</h4>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nombre</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nombre">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1"># de telefono</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="550123456780">
+            </div>
+          </form>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Conductor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Nuevo Conductor</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nombre</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nombre">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Licencia de Manejo</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nombre">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nombre</label>
+              <select class="form-control" name="camion">
+                <option value="1">Camion 1</option>
+                <option value="2">Camion 2</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Entrega" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Nuevo punto de entrega</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nombre</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nombre">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Latitud</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="19.87872378">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Longitud</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="160.898923">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="EntregasCamion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Proceso de Entregas</h4>
+        </div>
+        <div class="modal-body">
+          <h2>Bodega 1</h2>
+          <p>Av. Revolucion # 123 <img src="http://vignette2.wikia.nocookie.net/club-penguin-super-fanon/images/c/cd/Palomita.jpg/revision/latest?cb=20160808054250&path-prefix=es" alt="" width="50px"></p>
+          <h2>Bodega 3</h2>
+          <p>Av. Paseo de la Reforma # 345 <img src="http://vignette2.wikia.nocookie.net/club-penguin-super-fanon/images/c/cd/Palomita.jpg/revision/latest?cb=20160808054250&path-prefix=es" alt="" width="50px"></p>
+          <h2>Bodega 1</h2>
+          <p>Av. Insurgentes sur # 223</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="DatosChofer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Proceso de Entregas</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="..." alt="">
+            </div>
+            <div class="col-md-9">
+              <h4>Juan Lopez</h4>
+              <p>licencia: 8273827382738</p>
+              <p>celular: 669102903</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function mapLocation() {
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+
+function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var chicago = new google.maps.LatLng(19.425221, -99.156787);
+  var mapOptions = {
+    zoom: 10,
+    center: chicago
+  };
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  directionsDisplay.setMap(map);
+  google.maps.event.addDomListener(document.getElementById('routebtn'), 'click', calcRoute);
+}
+
+function calcRoute() {
+  var start = new google.maps.LatLng(19.417571, -99.162315);
+  var end = new google.maps.LatLng(19.420466, -99.181874);
+  var request = {
+    origin: start,
+    destination: end,
+    travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+      directionsDisplay.setMap(map);
+    } else {
+      alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
+    }
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+}
+mapLocation();
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzPwTAUN16ff364pXxjm3CSIBWRCHkMSA&callback=mapLocation"></script>
+</html>

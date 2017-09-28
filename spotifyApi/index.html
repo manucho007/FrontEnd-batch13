@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="spotifyApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+</head>
+<body class="container">
+  <input type="text" name="q" value="" placeholder="buscar..."> <input type="submit" name="" value="buscar">
+  <section class="row">
+    <h2>Artistas</h2>
+    <artist-comp></artist-comp>
+  </section>
+  <section>
+    <h2>Albums</h2>
+    <album-comp></album-comp>
+  </section>
+  <section>
+    <h2>Tracks</h2>
+    <track-comp></track-comp>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+  <script src="app/app.module.js"></script>
+  <script src="app/factories/spotify.factory.js"></script>
+  <script src="app/components/artist.component.js"></script>
+  <script src="app/components/album.component.js"></script>
+  <script src="app/components/tracks.component.js"></script>
+</body>
+</html>

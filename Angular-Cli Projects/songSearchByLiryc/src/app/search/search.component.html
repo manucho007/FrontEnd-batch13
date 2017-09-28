@@ -1,0 +1,10 @@
+
+  search works!
+  <input type="text" [(ngModel)]="name"> <button  name="button" (click)="buscar()">Buscar</button>
+
+  <div *ngIf="tracks != null" id="results">
+    <ul *ngFor="let t of tracks">
+      <li><button name="button" (click)="reproducir(t.track.track_name,t.track.artist_name)">{{t.track.track_name}}</button>
+      </li>
+    </ul>
+  </div>

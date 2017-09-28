@@ -1,0 +1,15 @@
+<div class="col s12 m4" *ngFor="let hero of characters">
+  <div class="card medium">
+    <div class="card-image">
+      <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">
+      <span class="card-title">{{hero.name}}</span>
+    </div>
+    <div class="card-content">
+      <p *ngIf="hero.description">{{hero.description}}</p>
+      <p *ngIf="!hero.description">Sin descripcion disponible</p>
+    </div>
+    <div class="card-action">
+      <a href="#">Detalle</a>
+    </div>
+  </div>
+</div>

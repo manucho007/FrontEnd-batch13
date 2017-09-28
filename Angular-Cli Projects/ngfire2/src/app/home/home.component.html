@@ -1,0 +1,26 @@
+<div *ngIf="provider == 3">Welcome {{(af.auth | async)?.google.displayName}}
+  <br>
+  <img src="{{(af.auth | async)?.google.photoURL}}" alt="">
+  <h2>Google Login</h2>
+</div>
+
+<div *ngIf="provider == 2">Welcome {{(af.auth | async)?.facebook.displayName}}
+  <br>
+  <img src="{{(af.auth | async)?.facebook.photoURL}}" alt="">
+  <h2>Facebook Login</h2>
+</div>
+
+<div *ngIf="provider == 1">Welcome {{(af.auth | async)?.twitter.displayName}}
+  <br>
+  <img src="{{(af.auth | async)?.twitter.photoURL}}" alt="">
+  <h2>Twitter Login</h2>
+</div>
+
+<div *ngIf="provider == 0">Welcome {{(af.auth | async)?.github.displayName}}
+  <br>
+  <img src="{{(af.auth | async)?.github.photoURL}}" alt="">
+  <h2>Github Login</h2>
+</div>
+
+<button (click)="logOut()">LogOut</button>
+<h1 *ngIf="!authUser">Necesitas Loguearte</h1>

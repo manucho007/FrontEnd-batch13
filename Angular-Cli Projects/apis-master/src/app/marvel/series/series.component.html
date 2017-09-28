@@ -1,0 +1,15 @@
+<div class="col s12 m4" *ngFor="let serie of series">
+  <div class="card medium">
+    <div class="card-image">
+      <img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="{{serie.title}}">
+      <span class="card-title">{{serie.title}}</span>
+    </div>
+    <div class="card-content">
+      <p *ngIf="serie.description">{{serie.description}}</p>
+      <p *ngIf="!serie.description">Sin descripcion disponible</p>
+    </div>
+    <div class="card-action">
+      <a href="{{serie.resourceURI}}">Detalle</a>
+    </div>
+  </div>
+</div>

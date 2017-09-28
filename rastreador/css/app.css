@@ -1,0 +1,18 @@
+body{
+  background: url(../images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:white;
+}
+nav{height: 50px; width: 100%}
+.nav-list{top:0;padding: 1.0em;float: right;  }
+.nav-list a{font-size: 25px; color: inherit;}
+.center{margin: 0 auto; text-align: center; padding-top: 10em;}
+.wrapper-form{max-width: 750px;margin: 0 auto; margin-top: 3em; padding: 1em; background-color: white; color: black; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;}
+.wrapper-dashboard{background-color: white; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; padding-bottom: 5em; padding-top: 1em;}
+.wrapper-side{padding: 1em; background-color: grey; padding-bottom: 2em;}
+.wrapper-side button{width: 100%;}
+.dashboard-main{color: black;}
+.modal{color: black}
