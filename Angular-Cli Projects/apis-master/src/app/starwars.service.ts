@@ -8,31 +8,31 @@ export class StarwarsService {
   constructor(private http : Http) { }
 
   swapiPeople(){
-    let url ="http://swapi.co/api/people/";
+    let url ="https://swapi.co/api/people/";
     return this.http.get(url)
       .toPromise()
       .then(response => response.json().results)
     }
   swapiFilms(){
-    let url ="http://swapi.co/api/films/";
+    let url ="https://swapi.co/api/films/";
     return this.http.get(url)
       .toPromise()
       .then(response => response.json().results)
     }
   swapiPlanets(){
-    let url ="http://swapi.co/api/planets/";
+    let url ="https://swapi.co/api/planets/";
     return this.http.get(url)
       .toPromise()
       .then(response => response.json().results)
     }
   swapiStarships(){
-    let url ="http://swapi.co/api/starships/";
+    let url ="https://swapi.co/api/starships/";
     return this.http.get(url)
       .toPromise()
       .then(response => response.json().results)
     }
   swapiVehicles(){
-    let url ="http://swapi.co/api/vehicles/";
+    let url ="https://swapi.co/api/vehicles/";
     return this.http.get(url)
       .toPromise()
       .then(response => response.json().results)
