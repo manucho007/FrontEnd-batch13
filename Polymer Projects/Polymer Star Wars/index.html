@@ -13,15 +13,21 @@
   <dom-module id="demo-element">
     <template>
       <template is="dom-repeat" items="response.results">
-        {{item.name}}
+        <h1>{{item.name}}</h1>
       </template>
-
+      <template is="dom-repeat" items="{{characters.data.results}}">
+        <paper-card heading="{{item.name}}" image="{{item.thumbnail.path}}.{{item.thumbnail.extension}}">
+          <div class="card-content">
+            {{item.description}}
+          </div>
+        </paper-card>
+      </template>
       <iron-ajax
         auto
-        url="http://swapi.co/api/people/"
+        url="https://swapi.co/api/people/"
         handle-as="json"
         on-response="handleResponse"
-        last-response"{{response}}">
+        last-response"{{characters}}">
       </iron-ajax>
       {{response.name}}
     </template>

@@ -10,19 +10,14 @@ import { AngularFireModule } from 'angularfire2';
 import { routing,appRoutingProvides } from './app.routing';
 
 
-// const myfirebaseConfig={
-//     apiKey: "AIzaSyDr2jjWl-u4apDi2srExyPnH8mhD268ACo",
-//     authDomain: "ngfire2-fe528.firebaseapp.com",
-//     databaseURL: "https://ngfire2-fe528.firebaseio.com",
-//     storageBucket: "ngfire2-fe528.appspot.com",
-//     messagingSenderId: "687344353509"
-// };
+
 const myfirebaseConfig={
-    apiKey: "AIzaSyD7bE0OxkT5Xj3mjBThm498Eeh_Q6oDctw",
-    authDomain: "ngfirebase-d812f.firebaseapp.com",
-    databaseURL: "https://ngfirebase-d812f.firebaseio.com",
-    storageBucket: "ngfirebase-d812f.appspot.com",
-    messagingSenderId: "1065035923088"
+  apiKey: "AIzaSyD7bE0OxkT5Xj3mjBThm498Eeh_Q6oDctw",
+  authDomain: "ngfirebase-d812f.firebaseapp.com",
+  databaseURL: "https://ngfirebase-d812f.firebaseio.com",
+  projectId: "ngfirebase-d812f",
+  storageBucket: "ngfirebase-d812f.appspot.com",
+  messagingSenderId: "1065035923088"
 };
 
 @NgModule({

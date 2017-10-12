@@ -14,7 +14,7 @@
     </demo-element>
     <dom-module id="demo-element">
         <template>
-            <template is="dom-repeat" items="{{response.data.results}}">
+            <template is="dom-repeat" items="{{characters.data.results}}">
               <paper-card heading="{{item.name}}" image="{{item.thumbnail.path}}.{{item.thumbnail.extension}}">
                 <div class="card-content">
                   {{item.description}}
@@ -27,7 +27,7 @@
                params='{"ts":"1", "apikey":"cd610d56ee03be3a21d2153d09049058", "hash": "7fbd146bd057401df720b3fe57c71bdb"}'
                handle-as="json"
                on-response="handleResponse"
-               last-response="{{response}}">
+               last-response="{{characters}}">
             </iron-ajax>
         </template>
     </dom-module>
